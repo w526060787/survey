@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>调查问卷</title>
+</head>
+<body>
+    <p><h2>华中大创客空间·360前端报名表</h2></p>
+    <p>请大家认真填写此表单，谢谢~</p>
+    <hr>
+    <form action="survey" method="POST">
+        <table >
+            <tr>
+                <label for="1"><td>1.姓名*</td></label>
+            </tr>
+            <tr>
+                <td><input type="text" name="username"id="1" placeholder="请输入姓名" autofocus></td>
+            </tr>
+            <!--label标签不管用，不能聚焦到指定的空格-->
+            <tr>
+                <td>2.性别</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="sex"value="male">男
+                    <input type="radio" name="sex"value="famale">女
+                </td>
+            </tr>
+            <label>
+            <tr>
+            <td>3.联系方式*</td>         
+            </tr>     
+            <tr>
+                <td><input pattern="1\d{10}" placeholder="请输入手机号码" name="tele"></td>
+            </tr>    
+            </label>   
+        </table>
+        4.院系<br>
+        <input type="text" name="xueyuan" placeholder="请输入学院"><br>
+        5.年级<br>
+        <select name="nianji" id="nianji">
+            <optgroup label="本科">
+                    <option value="015">15级</option>
+                    <option value="016">16级</option>
+                    <option value="017">17级</option>
+                    <option value="018">18级</option>
+            </optgroup>
+            <optgroup label="研究生">
+                    <option value="116">16级</option>
+                    <option value="117">17级</option>
+                    <option value="118">18级</option>
+            </optgroup>
+        </select>
+        <br>
+        6.上课时间<br>
+        <input type="checkbox" name="time" id="time1" value="sat"><label for="time1">周六</label>
+        <input type="checkbox" name="time" id="time2" value="sun"><label for="time2">周日</label>
+        <br>
+        <input type="reset"value="重置" >
+        <input type="submit" value="提交" >
+        <!-- 假装我用了button按钮<button disabled="disabled">其它</button>-->
+
+    </form>
+</body>
+</html>
